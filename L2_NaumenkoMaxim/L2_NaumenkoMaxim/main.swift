@@ -90,3 +90,28 @@ func fibonacci(_ array : [Int]) -> [Int] {
 var arr = [0,1]
 print(fibonacci(arr))
 
+//Задание 6
+
+func integer (_ n : Int) -> [Int] {
+let integernumber = Array(2...n)
+    return integernumber
+}
+
+var intArray = integer(100)
+print(intArray)
+
+var p: Int = intArray[0]
+var count = 0
+
+while count < intArray.count - 1 {
+    
+for number in intArray {
+    if number % p == 0 && number != p
+    {
+        intArray.remove(at: intArray.firstIndex(of: number)!)
+    }
+}
+    p = p + 1
+    count = count + 1
+}
+print(intArray)
